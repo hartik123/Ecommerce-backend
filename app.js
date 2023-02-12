@@ -13,6 +13,7 @@ import getCartProducts from './routes/getCartProducts.js'
 import emailVerification from './routes/emailVerification.js'
 import deleteProduct from './routes/deleteProduct.js'
 import getProfileDetails from './routes/getProfileDetails.js'
+import removeCartProduct from './routes/removeCartProduct.js'
 
 import createOrder from './routes/order/createOrder.js'
 import getOrderDetails from './routes/order/getOrderDetails.js'
@@ -49,6 +50,7 @@ app.use('/api', createOrder)
 app.use('/api', getOrderDetails)
 app.use('/api', getOrderDetailsAdmin)
 app.use('/api', changeOrderStatus)
+app.use('/api', removeCartProduct)
 
 
 
