@@ -4,10 +4,10 @@ import { productinfoModel } from '../models/productModel.js';
 
 const getCartProductsController = async (req, res) =>{
 
-    console.log(req.body);
+    // console.log(req.body);
 
 try{
-  console.log(req.body);
+  // console.log(req.body);
   const results = await addToCartinfoModel.aggregate([
     {
       $lookup:{
@@ -41,8 +41,8 @@ try{
     }
   ]);
 
-// console.log("results",results)
-  if (results != null) {
+console.log("results",results)
+  if (results.length!=0) {
       res.json({
         result: results,
       });
